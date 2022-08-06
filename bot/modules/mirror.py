@@ -419,8 +419,8 @@ def _mirror(bot, message, isZip=False, extract=False, isQbit=False, isLeech=Fals
             uname = f'<a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>'
             botstart = f"http://t.me/{b_uname}"
             buttons.buildbutton("Klik Start dlu", f"{botstart}")
-            startwarn = f"Dear {uname},\n\n<b>Klik Start di PM dulu (Private Chat).</b>\n\n" \
-                        f"Sekarang File dikirim leeat PM dan LOG DOWNLOAD"
+            startwarn = f"Dear {uname},\n\n<b>Klik Start di PM dulu (Chat Pribadi).</b>\n\n" \
+                        f"Sekarang File dikirim lewat PM dan LOG DOWNLOAD"
             message = sendMarkup(startwarn, bot, message, InlineKeyboardMarkup(buttons.build_menu(2)))
             Thread(target=auto_delete_message, args=(bot, message, message)).start()
             return
